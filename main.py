@@ -61,7 +61,8 @@ html, body, [class*="css"] {
 .stApp { background: var(--bg) !important; }
 
 /* ── Hide default Streamlit elements ── */
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer { visibility: hidden; }
+header { background: transparent !important; }
 .block-container { padding: 1.5rem 2rem !important; max-width: 1400px; }
 
 /* ── Scrollbar ── */
@@ -685,20 +686,21 @@ def page_home():
     st.markdown("""<div class="section-title">✨ What You Can Do</div>""", unsafe_allow_html=True)
     cols = st.columns(4)
     features = [
-        ("📖", "Topic Explanation", "Ask to explain any topic. Get theory, examples, and key points drawn from your study materials."),
-        ("📝", "Question Solving", "Paste exam questions and get detailed, mark-ready answers using your uploaded content."),
-        ("🧠", "Quiz Generation", "Generate practice MCQs and short-answer questions from your uploaded materials."),
-        ("📊", "Study Dashboard", "Track which topics are covered, how many documents are indexed, and content breakdown."),
+        ("📖", "Topic Explanation", "Ask to explain any topic. Get theory, examples, and key points drawn from your study materials.", "chat", "Open Chat ➔"),
+        ("📝", "Question Solving", "Paste exam questions and get detailed, mark-ready answers using your uploaded content.", "questions", "Open Solver ➔"),
+        ("🧠", "Quiz Generation", "Generate practice MCQs and short-answer questions from your uploaded materials.", "chat", "Generate Quiz ➔"),
+        ("📊", "Study Dashboard", "Track which topics are covered, how many documents are indexed, and content breakdown.", "dashboard", "Open Dashboard ➔"),
     ]
-    for col, (icon, title, desc) in zip(cols, features):
+    for col, (icon, title, desc, page_id, btn_label) in zip(cols, features):
         with col:
             st.markdown(f"""
-            <div class="feature-card">
+            <div class="feature-card" style="margin-bottom:0.8rem;">
                 <div class="f-icon">{icon}</div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
             </div>
             """, unsafe_allow_html=True)
+            st.button(btn_label, key=f"feat_btn_{page_id}_{title.split()[0].lower()}", use_container_width=True, on_click=set_page, args=(page_id,))
 
     st.markdown("<br>", unsafe_allow_html=True)
 
