@@ -504,6 +504,15 @@ def init_session():
 init_session()
 
 
+def set_page(page_name: str):
+    st.session_state.page = page_name
+
+
+def set_question_pending(ex_text: str):
+    st.session_state["_question_pending"] = ex_text
+
+
+
 # ─────────────────────────────────────────────────────────────────
 #  Imports (deferred to allow CSS to load first)
 # ─────────────────────────────────────────────────────────────────
@@ -579,10 +588,13 @@ def render_sidebar():
         ]
         for page_id, icon, label in nav_items:
             active = "active" if st.session_state.page == page_id else ""
-            if st.button(f"{icon}  {label}", key=f"nav_{page_id}",
-                         use_container_width=True):
-                st.session_state.page = page_id
-                st.rerun()
+            st.button(
+                f"{icon}  {label}",
+                key=f"nav_{page_id}",
+                use_container_width=True,
+                on_click=set_page,
+                args=(page_id,),
+            )
 
         st.divider()
 
@@ -661,17 +673,11 @@ def page_home():
     # Quick action buttons
     c1, c2, c3 = st.columns(3)
     with c1:
-        if st.button("📁  Upload Documents", use_container_width=True, key="home_upload"):
-            st.session_state.page = "upload"
-            st.rerun()
+        st.button("📁  Upload Documents", use_container_width=True, key="home_upload", on_click=set_page, args=("upload",))
     with c2:
-        if st.button("🧠  Start Chatting", use_container_width=True, key="home_chat"):
-            st.session_state.page = "chat"
-            st.rerun()
+        st.button("🧠  Start Chatting", use_container_width=True, key="home_chat", on_click=set_page, args=("chat",))
     with c3:
-        if st.button("📝  Solve Questions", use_container_width=True, key="home_qsolve"):
-            st.session_state.page = "questions"
-            st.rerun()
+        st.button("📝  Solve Questions", use_container_width=True, key="home_qsolve", on_click=set_page, args=("questions",))
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -962,9 +968,7 @@ def page_chat():
             </div>
         </div>
         """, unsafe_allow_html=True)
-        if st.button("📁  Go to Upload", use_container_width=False):
-            st.session_state.page = "upload"
-            st.rerun()
+        st.button("📁  Go to Upload", use_container_width=False, on_click=set_page, args=("upload",))
         return
 
     # Chat history display
@@ -1139,9 +1143,13 @@ def page_question_solver():
             "Explain TCP 3-way handshake with a diagram.",
         ]
         for ex in examples:
-            if st.button(f"💬 {ex[:45]}...", key=f"qex_{hash(ex)}", use_container_width=True):
-                st.session_state["_question_pending"] = ex   # staging key — widget not yet rendered
-                st.rerun()
+            st.button(
+                f"💬 {ex[:45]}...",
+                key=f"qex_{hash(ex)}",
+                use_container_width=True,
+                on_click=set_question_pending,
+                args=(ex,),
+            )
 
         st.markdown('</div>', unsafe_allow_html=True)
 
