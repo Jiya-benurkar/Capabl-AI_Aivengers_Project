@@ -1,0 +1,372 @@
+ 
+ 
+Subject 
+Guide 
+& 
+Question 
+Bank 
+Assistant 
+AI 
+Agent 
+Development 
+Project – Dual Track Version 
+Team Size: 3–4 students | Duration: 8 Weeks | Choose Your Challenge Level 
+Project Overview 
+Build an AI-powered academic assistant that serves as both a comprehensive 
+subject guide and question bank explainer. Students can upload lecture notes, 
+textbooks, lab manuals, and previous year question papers to create a complete 
+learning companion. Ask "Explain Database Normalization with examples" or "How 
+to solve Q3 from 2023 DBMS paper" and get comprehensive answers combining 
+theory, examples, and practice problems from all uploaded materials. 
+Domain Focus: Educational Technology & Comprehensive Academic Learning 
+ Core Skills: Multi-source RAG, academic content synthesis, topic understanding, 
+exam preparation, intelligent content organization 
+CHOOSE YOUR TRACK 
+Track A: Essential (Recommended for Most Teams) 
+● Focus: Core multi-document learning assistant, achievable goals, strong 
+fundamentals 
+● Domain: Subject Study Guide OR Academic Learning Assistant 
+● APIs: 2-3 basic integrations (Multi-document processing + Topic 
+explanation + Question solving) 
+● Framework: Standard LangChain with multi-source RAG tools 
+● UI: Streamlit with academic dashboard 
+● Deployment: Single platform (Streamlit Cloud) 
+● Features: Multi-document upload, topic explanations, question solutions, 
+basic content organization 
+Track B: Advanced (For Confident Teams) 
+● Focus: Enhanced academic learning with intelligent content synthesis 
+ 
+ 
+● Domain: Smart Subject Mastery Platform 
+● APIs: 3-4 integrations with advanced learning features 
+● Framework: LangChain with custom academic tools 
+● UI: React/Next.js with interactive learning interface 
+● Deployment: Standard cloud deployment with content management 
+● Features: Advanced topic mapping, learning path generation, adaptive 
+explanations, comprehensive analytics 
+Learning Outcomes 
+By completing this project, you will: 
+● Multi-Source RAG: Build systems combining textbooks, notes, question 
+papers, and lab materials 
+● Academic Content Synthesis: Create comprehensive explanations from 
+multiple educational sources 
+● Topic Understanding: Generate complete topic guides with theory, 
+examples, and practice 
+● Question-Content Mapping: Link exam questions to relevant study 
+materials automatically 
+● Learning Analytics: Track topic mastery and identify knowledge gaps 
+● Student Experience: Design intuitive interfaces for comprehensive 
+academic learning 
+Academic Content & Processing APIs 
+Primary Document Processing (Choose 2-3): 
+● PyPDF2/PDFplumber: Textbooks, lecture slides, question papers 
+● python-docx: Lab manuals, assignments, notes 
+● python-pptx: PowerPoint lecture slides processing 
+● OCR Tools: Tesseract for scanned academic materials 
+● Unstructured: Advanced multi-format academic document parsing 
+Content Analysis & Organization: 
+● spaCy: Academic text analysis and topic extraction 
+● NLTK: Educational content preprocessing and analysis 
+● Topic Modeling: BERTopic/LDA for automatic topic organization 
+● Knowledge Graphs: NetworkX for concept relationship mapping 
+● Academic NER: Custom models for identifying technical terms 
+ 
+ 
+Indian Educational Context: 
+● University Curricula: Integration with Indian university syllabus formats 
+● Multiple Boards: CBSE, state boards, autonomous college materials 
+● Language Support: English + basic Hindi technical term recognition 
+● Course Structure: Semester-based, CBCS-compliant content organization 
+● Examination Patterns: Internal/external, theory/practical integration 
+Vector Databases & Search: 
+● FAISS: Fast multi-document similarity search 
+● ChromaDB: Persistent storage for academic content with metadata 
+● Pinecone: Cloud vector database with subject categorization 
+● Weaviate: Open-source with academic taxonomy support 
+LLM Integration Options: 
+● OpenAI API: GPT-3.5-turbo, GPT-4 for comprehensive explanations 
+● Google Gemini: Strong reasoning for academic content 
+● Ollama: Local models (Llama, Mistral) for privacy-conscious institutions 
+● Anthropic Claude: Excellent for detailed academic analysis 
+Week-by-Week Structure 
+Week 1-2: Foundation & Quick Win 
+Goal: Get basic multi-document processing working with topic explanations 
+Track A Checklist: 
+● [ ] Create GitHub repo with academic assistant project structure 
+● [ ] Set up development environment (Python, LangChain, Streamlit, PyPDF2, 
+FAISS) 
+● [ ] Build multi-format document processing (PDF, DOCX, PPTX) 
+● [ ] Implement basic content categorization (notes, textbook, questions, 
+labs) 
+● [ ] Create simple topic-based retrieval system 
+● [ ] Build Streamlit interface for multi-document upload and topic queries 
+● [ ] Deploy basic version on Streamlit Cloud 
+● [ ] Record 2-minute demo showing comprehensive topic explanation 
+● [ ] Milestone: Working system that explains topics using multiple source 
+types 
+ 
+ 
+Track B Checklist: 
+● [ ] All Track A requirements plus: 
+● [ ] Set up React/Next.js frontend with document management 
+● [ ] Implement advanced document preprocessing with metadata 
+extraction 
+● [ ] Add persistent vector database with content categorization 
+● [ ] Create better content organization with automatic tagging 
+● [ ] Set up user management for different subjects and courses 
+Week 3-4: Core Academic Learning Architecture 
+Goal: Transform into intelligent subject guide with question-solving capabilities 
+Track A Checklist: 
+● [ ] Integrate 2-3 core tools (topic explanation + question solving + content 
+synthesis) 
+● [ ] Implement comprehensive topic explanations combining multiple 
+sources 
+● [ ] Add question bank integration with solution generation using study 
+materials 
+● [ ] Create basic learning progression (theory → examples → practice → 
+assessment) 
+● [ ] Handle cross-document referencing for complete topic coverage 
+● [ ] Add simple subject and chapter organization 
+● [ ] Milestone: System provides complete topic understanding and solves 
+related questions 
+Track B Checklist: 
+● [ ] All Track A requirements plus: 
+● [ ] Add 3-4 advanced tools (explanation + solving + synthesis + analytics) 
+● [ ] Create intelligent content mapping between topics and questions 
+● [ ] Implement adaptive explanation levels (beginner, intermediate, 
+advanced) 
+● [ ] Add automatic prerequisite topic identification and linking 
+● [ ] Create comprehensive knowledge graph for subject relationships 
+Week 5-6: Domain Specialization 
+Track A Options (Choose ONE): 
+Option A1: Computer Science Subject Guide 
+ 
+ 
+● [ ] Add CS-specific content processing (code examples, algorithms, 
+diagrams) 
+● [ ] Implement programming language detection and syntax highlighting 
+● [ ] Create algorithm explanation with step-by-step breakdowns 
+● [ ] Add database/networking/OS specific content understanding 
+● [ ] Handle Indian university CS curriculum patterns 
+Option A2: Comprehensive Exam Preparation Assistant 
+● [ ] Create complete exam preparation workflows combining all materials 
+● [ ] Add topic-wise question practice with solutions from study materials 
+● [ ] Implement weak area identification and targeted content 
+recommendations 
+● [ ] Generate custom study plans based on syllabus and available content 
+● [ ] Add progress tracking across topics and question practice 
+Track B Requirements: 
+● [ ] Integrate 3-4 academic processing APIs with sophisticated error 
+handling 
+● [ ] Add advanced feature: intelligent learning path generation OR adaptive 
+content difficulty 
+● [ ] Implement comprehensive academic analytics with learning insights 
+● [ ] Create multi-subject content correlation and cross-referencing 
+● [ ] Add intelligent study recommendations based on content analysis and 
+user progress 
+Week 7-8: Polish & Production 
+Track A Checklist: 
+● [ ] Create professional Streamlit interface with: 
+○ [ ] Multi-document upload area with content type classification 
+○ [ ] Subject dashboard with topic organization and progress tracking 
+○ [ ] Comprehensive query interface (topic explanations + question 
+solving) 
+○ [ ] Content browser with cross-references and related materials 
+○ [ ] Export functionality (study guides, topic summaries, question 
+solutions) 
+● [ ] Add input validation for academic content and learning queries 
+● [ ] Implement proper error messages for content processing failures 
+● [ ] Write comprehensive README with setup instructions and usage guide 
+ 
+ 
+● [ ] Prepare final demo video (5-7 minutes) showcasing complete learning 
+assistance 
+● [ ] Milestone: Production-ready comprehensive academic learning 
+application 
+Track B Checklist: 
+● [ ] Build React/Next.js interface with modern academic learning UX 
+● [ ] Deploy with standard cloud hosting (frontend + backend with content 
+management) 
+● [ ] Add comprehensive learning analytics dashboard with progress insights 
+● [ ] Implement basic security practices for academic content management 
+● [ ] Add performance optimization for large multi-document processing 
+● [ ] Create detailed user documentation and academic setup guide 
+● [ ] Prepare comprehensive demo (8-10 minutes) with advanced learning 
+features 
+Assessment Criteria 
+Track A Grading (100 points): 
+● Multi-Source Learning Functionality (40 points): Working system with 
+multi-document processing + topic explanations + question solving 
+● Content Quality & Comprehensiveness (20 points): Accurate, detailed 
+explanations combining multiple academic sources 
+● User Interface (15 points): Clean, functional Streamlit app for 
+comprehensive learning 
+● Deployment (15 points): Stable hosted application with multi-document 
+management 
+● Documentation (10 points): Clear README with academic setup and usage 
+instructions 
+Track B Grading (120 points + bonuses): 
+● Enhanced Academic Architecture (45 points): 3-4 integrated tools, 
+advanced content synthesis 
+● Better Learning UI/UX (25 points): React interface with engaging 
+comprehensive learning features 
+● Cloud Deployment (20 points): Full-stack deployment with content 
+management system 
+● Code Quality (15 points): Clean code, basic testing, academic content 
+optimization 
+ 
+ 
+● Technical Presentation (15 points): System explanation, academic 
+learning methodology walkthrough 
+● Bonus Features (up to 15 points): Learning path generation, adaptive 
+content, advanced analytics 
+Suggested Tech Stacks 
+Track A Stack: 
+● Frontend: Streamlit with custom components for academic content 
+displays 
+● Backend: Python + LangChain + PyPDF2 + python-docx + spaCy + FAISS 
+● Database: SQLite for learning progress and content metadata 
+● LLM: OpenAI GPT-3.5-turbo or Google Gemini for comprehensive 
+explanations 
+● Document Processing: Multi-format support with academic content 
+optimization 
+● Deployment: Streamlit Cloud 
+● Academic APIs: Multi-document processing, topic analysis, question 
+parsing 
+Track B Stack: 
+● Frontend: React/Next.js + Tailwind CSS + Academic content viewer 
+components 
+● Backend: FastAPI OR Node.js + LangChain 
+● Database: PostgreSQL OR MongoDB (comprehensive academic content 
+storage) 
+● Vector DB: ChromaDB OR Pinecone for persistent multi-document storage 
+● LLM: GPT-4 or Claude for detailed academic explanations and analysis 
+● Deployment: Vercel (frontend) + Railway/Render (backend) 
+● Academic APIs: Advanced multi-document processing + learning 
+analytics 
+Success Metrics 
+Track A Success: 
+● 90%+ teams deploy working comprehensive academic assistant 
+● 80%+ teams demonstrate accurate multi-source content synthesis 
+● All teams can explain advanced RAG concepts in educational contexts 
+ 
+ 
+● Portfolio-worthy comprehensive learning project for internship applications 
+Track B Success: 
+● Enhanced academic platform with intelligent learning capabilities 
+● Standard deployment practices with comprehensive content management 
+● Advanced learning analytics and adaptive content delivery 
+implementation 
+● Interview-ready technical presentation for edu-tech and academic 
+technology roles 
+Submission Requirements 
+All Teams Submit: 
+GitHub Repository with: 
+● Complete source code with comprehensive academic workflow 
+automation and content privacy protection 
+● README with setup instructions, API configuration, and usage examples 
+● Demo video (5-10 minutes) showcasing complete subject guide and 
+question bank assistance 
+● Architecture documentation explaining multi-source RAG and academic 
+content processing flow 
+● Live deployment with working URL and comprehensive sample academic 
+scenarios 
+Viva Presentation covering: 
+● Multi-document RAG implementation and academic content synthesis 
+strategies 
+● Technical architecture decisions for handling diverse educational materials 
+● Learning effectiveness algorithms and comprehensive content delivery 
+techniques 
+● Individual team member contributions and learning outcomes 
+● Future improvement ideas for enhanced comprehensive academic 
+assistance 
+Track B Additional Requirements: 
+● Technical Blog Post (Medium/LinkedIn) 
+● Performance Benchmarks for multi-document processing and learning 
+effectiveness 
+ 
+ 
+● Comprehensive academic content quality assessment 
+● Learning analytics and student progress evaluation report 
+Portfolio Benefits: 
+● LinkedIn Showcase: Help teams create professional comprehensive AI 
+learning project posts 
+● GitHub Stars: Instructor promotion of best subject guide repositories 
+● Industry Connections: Introduction to major edu-tech companies and 
+comprehensive learning platforms 
+● Internship Opportunities: Showcase to companies like BYJU'S, Unacademy, 
+Khan Academy, Coursera, and comprehensive learning startups 
+Frequently Asked Questions 
+Q: 
+How 
+is 
+this 
+different 
+from 
+just 
+a 
+question 
+bank 
+explainer? 
+ A: This provides complete topic understanding combining textbooks, notes, labs, 
+AND question papers. Students get comprehensive learning, not just exam 
+preparation. It's like having a personal tutor for each subject. 
+Q: How do I handle different types of academic content effectively? 
+ A: Implement content type detection (theory/practical/examples), create source-
+aware explanations, maintain content hierarchy, and provide multi-perspective 
+topic coverage from all available sources. 
+Q: What about ensuring comprehensive and accurate topic explanations? 
+ A: Cross-reference multiple sources, implement confidence scoring, show all 
+contributing materials, maintain source attribution, and provide comprehensive 
+coverage indicators for topic completeness. 
+Q: 
+Can 
+we 
+switch 
+tracks 
+mid-project? 
+ A: Yes, from B to A after Week 4 checkpoint. Consider the complexity of advanced 
+learning analytics and multi-document synthesis when deciding. 
+Q: 
+How 
+do 
+I 
+organize 
+content 
+from 
+multiple 
+sources 
+coherently? 
+ A: Create topic taxonomies, implement content deduplication, maintain source 
+attribution, build knowledge graphs, and provide structured learning progressions 
+from basic to advanced concepts. 
+Q: What about handling different academic subjects and their unique 
+requirements? 
+ A: Track A: Focus on general academic content patterns. Track B: Implement 
+ 
+ 
+subject-specific processing (CS code examples, Math equations, Science 
+diagrams) and adaptive explanation formats. 
+Q: How do I measure learning effectiveness and content comprehensiveness? 
+ A: Track topic coverage completeness, implement comprehension assessment, 
+measure query resolution success, analyze content gap identification, and provide 
+learning progress analytics. 
+Q: What about integration with existing learning management systems? 
+ A: Track A: Focus on standard content export formats. Track B: Implement basic 
+LMS integration capabilities and standard educational data exchange formats. 
+Q: How do I handle copyright and fair use with multiple academic sources? 
+ A: Focus on user-uploaded content, provide proper attribution systems, implement 
+fair use guidelines, never redistribute copyrighted materials, and encourage 
+institutional content policies. 
+Q: 
+What 
+about 
+offline 
+functionality 
+for 
+comprehensive 
+learning? 
+ A: Implement content caching for core topics, provide offline content viewing, 
+maintain basic query capabilities, and ensure synchronization when connectivity 
+returns for seamless learning experiences. 
+ 
